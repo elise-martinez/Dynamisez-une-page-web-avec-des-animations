@@ -13,7 +13,7 @@ header {
   font-family: "Shrikhand";
   text-align: center;
   box-shadow: 0 5px 5px 0 lightgray;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 header h1 {
   margin: 0px;
@@ -28,6 +28,25 @@ header h1 {
 }
 .apropos h1 {
   font-size: 25px;
+}
+
+.position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EAEAEA;
+  padding: 10px;
+}
+.position i {
+  font-size: 15px;
+}
+.position input {
+  border: none;
+  font-size: 15px;
+  background-color: #EAEAEA;
+  text-align: center;
+  font-weight: bold;
+  width: 150px;
 }
 
 button {
