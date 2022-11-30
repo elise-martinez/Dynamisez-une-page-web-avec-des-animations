@@ -1,0 +1,72 @@
+.fonctionnement {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    padding: $bigspace;
+
+
+    .propositions {
+        animation-name: itemAppear;
+        animation-duration: 1000ms;
+        animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
+        animation-fill-mode: both;
+
+        @for $i from 1 to 3 {
+            &:nth-child(#{$i}) {
+                animation-delay: 100ms * $i;
+            }
+        }
+
+
+        .propositions__etape {
+            display: flex;
+            align-items: center;
+            @include box-shadow;
+            background-color: $color-fond;
+            box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+            border-radius: 15px;
+            margin: 10px 0 20px 0;
+            padding: 6px;
+
+
+
+            .propositions__etape__numero {
+                position: absolute;
+                left: 10px;
+                padding-top: 2px;
+                width: 23px;
+                height: 20px;
+                border-radius: 50px;
+                text-align: center;
+                font-size: 0.9em;
+                color: $white;
+                background-color: $primary-color;
+
+            }
+
+            & i {
+                font-size: 15px;
+                font-weight: bold;
+                margin: 0 35px 0 35px;
+            }
+
+            & p {
+                font-size: 15px;
+                font-weight: bold;
+            }
+
+
+
+        }
+
+        .propositions__etape:hover {
+            background-color: rgb(117, 86, 220, 0.1);
+
+            & i {
+                color: $primary-color;
+            }
+
+
+        }
+    }
+}

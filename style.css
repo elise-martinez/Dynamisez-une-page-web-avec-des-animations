@@ -59,4 +59,60 @@ button {
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
 }
 
+.fonctionnement {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.fonctionnement .propositions {
+  animation-name: itemAppear;
+  animation-duration: 1000ms;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+}
+.fonctionnement .propositions:nth-child(1) {
+  animation-delay: 100ms;
+}
+.fonctionnement .propositions:nth-child(2) {
+  animation-delay: 200ms;
+}
+.fonctionnement .propositions .propositions__etape {
+  display: flex;
+  align-items: center;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  background-color: #f7f7f7;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  border-radius: 15px;
+  margin: 10px 0 20px 0;
+  padding: 6px;
+}
+.fonctionnement .propositions .propositions__etape .propositions__etape__numero {
+  position: absolute;
+  left: 10px;
+  padding-top: 2px;
+  width: 23px;
+  height: 20px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 0.9em;
+  color: white;
+  background-color: #9356dc;
+}
+.fonctionnement .propositions .propositions__etape i {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 35px 0 35px;
+}
+.fonctionnement .propositions .propositions__etape p {
+  font-size: 15px;
+  font-weight: bold;
+}
+.fonctionnement .propositions .propositions__etape:hover {
+  background-color: rgba(117, 86, 220, 0.1);
+}
+.fonctionnement .propositions .propositions__etape:hover i {
+  color: #9356dc;
+}
+
 /*# sourceMappingURL=style.css.map */
