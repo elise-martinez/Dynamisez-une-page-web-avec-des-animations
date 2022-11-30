@@ -1,0 +1,65 @@
+.menus {
+    padding: $bigspace;
+    background-color: $color-fond;
+
+    .card {
+        margin-top: 20px;
+        border-radius: 1rem;
+        background-color: $white;
+        position: relative;
+        @include box-shadow;
+
+        /*animations à ajouter ici*/
+
+        
+
+
+
+
+        &__new {
+            width: 80px;
+            padding: 10px;
+            color: #0c6b50;
+            background: $color-tertiary;
+            border-radius: 3px;
+            text-align: center;
+            position: absolute;
+            right: 1rem;
+            top: 1.5rem;
+        }
+
+        .card__image {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 1rem 1rem 0 0;
+        }
+
+        .card__description {
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            padding: 5px;
+        }
+
+        & p,
+        h4 {
+            font-size: 20px;
+            padding-left: 10px;
+            margin: 5px;
+        }
+
+        & i {
+            position: absolute;
+            top: 15px;
+            right: 10%;
+
+        }
+
+    }
+
+
+
+}
