@@ -1,0 +1,18 @@
+
+footer {
+    background-color: $fond-footer;
+    font-size: 20px;
+    padding: $bigspace;
+    & h3{
+        color: $white;
+        font-family: "Shrikhand";
+    }
+    & a{    
+        display: flex;
+        color: $white;  
+        padding-top: $space;
+    }
+    & i{
+        padding-right: 10px;
+    }
+}

@@ -163,4 +163,22 @@ button {
   right: 10%;
 }
 
+footer {
+  background-color: #353535;
+  font-size: 20px;
+  padding: 20px;
+}
+footer h3 {
+  color: white;
+  font-family: "Shrikhand";
+}
+footer a {
+  display: flex;
+  color: white;
+  padding-top: 10px;
+}
+footer i {
+  padding-right: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
