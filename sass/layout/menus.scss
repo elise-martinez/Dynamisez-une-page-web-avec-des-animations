@@ -9,8 +9,8 @@
         position: relative;
         @include box-shadow;
 
-        /*animations à ajouter ici*/
 
+     
         
 
 
@@ -60,6 +60,22 @@
 
     }
 
+    
 
+}
 
+@media screen and (min-width: 992px) {
+    .menus__list{
+        
+        .menus__list__haut{
+        display: flex;
+        gap: 30px ;}
+        .menus__list__bas{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+        a {width: 50%;
+        }
+    }
 }

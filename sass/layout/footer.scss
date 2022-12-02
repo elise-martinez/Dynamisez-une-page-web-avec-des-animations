@@ -16,3 +16,11 @@ footer {
         padding-right: 10px;
     }
 }
+@media screen and (min-width: 992px) {
+    footer{
+        padding: 20px 40px 40px 40px;
+        div {display: flex;
+        justify-content: space-between;}
+        
+    }
+}

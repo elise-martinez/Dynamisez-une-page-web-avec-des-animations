@@ -10,3 +10,22 @@
 
 
 }
+
+@media screen and (min-width: 992px) {
+    .renseignement{
+        display: flex;
+    }.apropos {
+
+        width: 50%;
+        padding-top: 90px;
+        background-color: $white;
+    }
+    .fonctionnement {
+        width: 50%;
+        margin-right: 30px;
+        
+        p{
+            font-size: 100px;
+        }
+    }
+}

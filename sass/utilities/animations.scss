@@ -1,0 +1,66 @@
+@keyframes itemAppear {
+    0% {
+      transform: scale(0)
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+@keyframes tourne {
+    to {
+        transform : rotate(360deg)
+    }
+}
+@keyframes disparait {
+    to {
+        transform: scale(0);
+    }
+}
+.propositions__etape,.card{
+
+
+    animation-name: itemAppear;
+    animation-duration: 1000ms;
+    animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
+    animation-fill-mode: both;
+    animation-delay: 3s;
+
+
+
+}
+.loader{
+    position: fixed;
+    background-color: $white;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    inset: 0;
+    z-index: 20;
+    opacity: 0.9;
+    animation: disparait 200ms 3s forwards;
+
+    transform-origin: top;
+
+    i {
+        animation: tourne 3s linear;
+        color: $primary-color;
+        
+    }
+}
+
+
+
+.fas {
+    color: transparent;
+    background-image: linear-gradient(to top, $primary-color,$secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+    &:hover.fas {
+        opacity: 1;
+    }
+}
+
+
+

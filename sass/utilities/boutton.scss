@@ -7,4 +7,11 @@ button {
     padding: 1rem 1rem; 
     @include box-shadow;
 
+    &:hover {
+        background-image: linear-gradient(to top, rgba(169, 126, 214, 0.9),rgba(249, 163, 229, 0.9));
+        box-shadow: 0.35rem 0.35rem 0.75rem rgba(0, 0, 0, 0.45);
+        
+
+    }
+
 }

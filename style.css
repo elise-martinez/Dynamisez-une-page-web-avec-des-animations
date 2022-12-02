@@ -1,8 +1,12 @@
-@charset "UTF-8";
 body {
   box-sizing: border-box;
   font-family: "Roboto";
   margin: auto;
+}
+
+h2 {
+  font-size: 25px;
+  margin-top: 15px;
 }
 
 a {
@@ -31,6 +35,23 @@ header h1 {
   font-size: 25px;
 }
 
+@media screen and (min-width: 992px) {
+  .renseignement {
+    display: flex;
+  }
+  .apropos {
+    width: 50%;
+    padding-top: 90px;
+    background-color: white;
+  }
+  .fonctionnement {
+    width: 50%;
+    margin-right: 30px;
+  }
+  .fonctionnement p {
+    font-size: 100px;
+  }
+}
 .position {
   display: flex;
   align-items: center;
@@ -59,24 +80,16 @@ button {
   padding: 1rem 1rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
 }
+button:hover {
+  background-image: linear-gradient(to top, rgba(169, 126, 214, 0.9), rgba(249, 163, 229, 0.9));
+  box-shadow: 0.35rem 0.35rem 0.75rem rgba(0, 0, 0, 0.45);
+}
 
 .fonctionnement {
   background-color: white;
   display: flex;
   flex-direction: column;
   padding: 20px;
-}
-.fonctionnement .propositions {
-  animation-name: itemAppear;
-  animation-duration: 1000ms;
-  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  animation-fill-mode: both;
-}
-.fonctionnement .propositions:nth-child(1) {
-  animation-delay: 100ms;
-}
-.fonctionnement .propositions:nth-child(2) {
-  animation-delay: 200ms;
 }
 .fonctionnement .propositions .propositions__etape {
   display: flex;
@@ -90,7 +103,7 @@ button {
 }
 .fonctionnement .propositions .propositions__etape .propositions__etape__numero {
   position: absolute;
-  left: 10px;
+  left: -10px;
   padding-top: 2px;
   width: 23px;
   height: 20px;
@@ -111,6 +124,7 @@ button {
 }
 .fonctionnement .propositions .propositions__etape:hover {
   background-color: rgba(117, 86, 220, 0.1);
+  scale: 1.01;
 }
 .fonctionnement .propositions .propositions__etape:hover i {
   color: #9356dc;
@@ -125,7 +139,7 @@ button {
   border-radius: 1rem;
   background-color: white;
   position: relative;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125); /*animations à ajouter ici*/
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
 }
 .menus .card__new {
   width: 80px;
@@ -163,6 +177,20 @@ button {
   right: 10%;
 }
 
+@media screen and (min-width: 992px) {
+  .menus__list .menus__list__haut {
+    display: flex;
+    gap: 30px;
+  }
+  .menus__list .menus__list__bas {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .menus__list a {
+    width: 50%;
+  }
+}
 footer {
   background-color: #353535;
   font-size: 20px;
@@ -179,6 +207,70 @@ footer a {
 }
 footer i {
   padding-right: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  footer {
+    padding: 20px 40px 40px 40px;
+  }
+  footer div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@keyframes itemAppear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes tourne {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disparait {
+  to {
+    transform: scale(0);
+  }
+}
+.propositions__etape, .card {
+  animation-name: itemAppear;
+  animation-duration: 1000ms;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+  animation-delay: 3s;
+}
+
+.loader {
+  position: fixed;
+  background-color: white;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  inset: 0;
+  z-index: 20;
+  opacity: 0.9;
+  animation: disparait 200ms 3s forwards;
+  transform-origin: top;
+}
+.loader i {
+  animation: tourne 3s linear;
+  color: #9356dc;
+}
+
+.fas {
+  color: transparent;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.fas:hover.fas {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
