@@ -1,0 +1,148 @@
+header {
+    position: relative;
+
+    & i {
+        font-size: 20px;
+        position: absolute;
+        top: 18px;
+        left: 30px;
+    }
+}
+
+.img-entete {
+
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    z-index: index 1;
+    position: absolute;
+
+
+}
+
+
+.resto {
+    background-color: $color-fond;
+    border-radius: 2rem 2rem 0 0;
+    position: relative;
+    top: 270px;
+    z-index: 10;
+
+
+    .resto__title {
+        font-family: "Shrikhand";
+        font-size: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        padding-top: $space;
+    }
+
+}
+
+main {
+    margin-top: -20px;
+    z-index: 1;
+}
+
+.menu {
+
+    padding: $bigspace;
+
+
+    .menu__category {
+        h3 {
+            text-transform: uppercase;
+            font-weight: 400;
+            padding-top: $space;
+            position: relative;
+
+            &::after {
+                content: "";
+                height: 0.25rem;
+                width: 3rem;
+                background-color: $color-tertiary;
+                position: absolute;
+                left: 0px;
+                top: 2.3rem;
+
+            }
+        }
+
+        .menu-items {
+            display: flex;
+            align-items: flex-end;
+            background-color: $white;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: $space 0 15px 0;
+            @include box-shadow;
+    
+
+
+            .menu-items__description {
+                padding: 10px 0 10px 10px;
+
+
+            }
+
+            h4 {
+                margin: 2px;
+                font-size: 17px;
+            }
+
+            p {
+                margin: 2px;
+                font-size: 15px;
+            }
+
+
+
+            .menu-items__prix {
+                margin-left: auto;
+                font-weight: bolder;
+                align-self: flex-end;
+                padding: 0 20px 10px 0;
+            }
+
+            .menu-items__valider {
+                color: $white;
+                background-color: $color-tertiary ;
+                align-self: center;
+                margin-right: -60px;
+                padding: 22px 20px 21px 20px;
+                border-radius: 0 15px 15px 0;
+                font-size: 10px;
+            }
+
+            &:hover {
+                .menu-items__valider {
+                    margin-right: 0px;
+                }
+
+                i {
+                    animation: rotation 1s;
+                }
+
+            }
+        }
+    }
+
+    .menu__boutton {
+        display: flex;
+        justify-content: center;
+        padding: $bigspace;
+
+        button {
+            padding: 20px 60px 20px 60px;
+        }
+    }
+
+}
+
+.footerresto {
+    position: relative;
+    top: 270px;
+}
