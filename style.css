@@ -18,7 +18,7 @@ header {
   font-family: "Shrikhand";
   text-align: center;
   box-shadow: 0 5px 5px 0 lightgray;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 header h1 {
   margin: 0px;
@@ -318,6 +318,29 @@ main {
   top: 270px;
 }
 
+@media screen and (min-width: 678px) {
+  .resto {
+    padding: 20px;
+  }
+  .resto .resto__title h2 {
+    inline-size: 80%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .resto {
+    padding: 20px;
+  }
+  .resto .resto__title h2 {
+    width: 95%;
+  }
+  .resto .menu__category__list {
+    display: flex;
+    justify-content: space-around;
+  }
+  .resto .menu__category__list .menu-items {
+    width: 30%;
+  }
+}
 button {
   color: white;
   font-size: 1rem;
