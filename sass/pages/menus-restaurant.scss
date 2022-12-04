@@ -113,9 +113,10 @@ main {
                 background-color: $color-tertiary ;
                 align-self: center;
                 margin-right: -60px;
-                padding: 22px 20px 21px 20px;
+                padding: 22px 20px 22px 20px;
                 border-radius: 0 15px 15px 0;
                 font-size: 10px;
+                transition: margin-right 0.5s;
             }
 
             &:hover {
