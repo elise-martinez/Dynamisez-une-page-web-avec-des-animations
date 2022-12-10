@@ -75,7 +75,7 @@
     animation-duration: 1000ms;
     animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
     animation-fill-mode: both;
-    @for $i from 1 to 4 {
+    @for $i from 1 to 30 {
         &:nth-child(#{$i}) {
             animation-delay: 100ms * $i;
         }

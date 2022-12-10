@@ -80,11 +80,14 @@ main {
             overflow: hidden;
             margin: $space 0 15px 0;
             @include box-shadow;
-    
+            
 
 
             .menu-items__description {
                 padding: 10px 0 10px 10px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                
 
 
             }
@@ -92,6 +95,7 @@ main {
             h4 {
                 margin: 2px;
                 font-size: 17px;
+                
             }
 
             p {
@@ -175,7 +179,8 @@ main {
 
 
             .menu-items{
-                width: 30%;
+                width: 23%;
+                
             }
         }
 
