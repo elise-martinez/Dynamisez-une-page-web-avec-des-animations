@@ -1,32 +1,28 @@
 header {
     position: relative;
-    
 
     & i {
-        font-size: 20px;
         position: absolute;
+        font-size: 20px;
         top: 18px;
         left: 30px;
     }
 }
 
 .img-entete {
-
+    position: absolute;
     height: 300px;
     width: 100%;
     object-fit: cover;
     display: block;
-    z-index: index 1;
-    position: absolute;
-
-
+    z-index: 1;
 }
 
 
 .resto {
+    position: relative;
     background-color: $color-fond;
     border-radius: 2rem 2rem 0 0;
-    position: relative;
     top: 270px;
     z-index: 10;
 
@@ -34,118 +30,126 @@ header {
     .resto__title {
         font-family: "Shrikhand";
         font-size: 15px;
-        width: 100%;
         display: flex;
-        justify-content: space-around;
         align-items: baseline;
-        padding-top: $space;
-    }
+        padding: $bigspace;
 
+        & i {
+            position: absolute;
+            right: 30px;
+            top: 40px;
+        }
+    }
 }
+
 
 main {
     margin-top: -20px;
     z-index: 1;
-}
 
-.menu {
+    .menu {
 
-    padding: $bigspace;
-
-
-    .menu__category {
-        h3 {
-            text-transform: uppercase;
-            font-weight: 400;
-            padding-top: $space;
-            position: relative;
-
-            &::after {
-                content: "";
-                height: 0.25rem;
-                width: 3rem;
-                background-color: $color-tertiary;
-                position: absolute;
-                left: 0px;
-                top: 2.3rem;
-
-            }
-        }
-
-        .menu-items {
-            display: flex;
-            align-items: flex-end;
-            background-color: $white;
-            border-radius: 15px;
-            overflow: hidden;
-            margin: $space 0 15px 0;
-            @include box-shadow;
-            
-
-
-            .menu-items__description {
-                padding: 10px 0 10px 10px;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                
-
-
-            }
-
-            h4 {
-                margin: 2px;
-                font-size: 17px;
-                
-            }
-
-            p {
-                margin: 2px;
-                font-size: 15px;
-            }
-
-
-
-            .menu-items__prix {
-                margin-left: auto;
-                font-weight: bolder;
-                align-self: flex-end;
-                padding: 0 20px 10px 0;
-            }
-
-            .menu-items__valider {
-                color: $white;
-                background-color: $color-tertiary ;
-                align-self: center;
-                margin-right: -60px;
-                padding: 22px 20px 22px 20px;
-                border-radius: 0 15px 15px 0;
-                font-size: 10px;
-                transition: margin-right 0.5s;
-            }
-
-            &:hover {
-                .menu-items__valider {
-                    margin-right: 0px;
-                }
-
-                i {
-                    animation: rotation 1s;
-                }
-
-            }
-        }
-    }
-
-    .menu__boutton {
-        display: flex;
-        justify-content: center;
         padding: $bigspace;
 
-        button {
-            padding: 20px 60px 20px 60px;
+        .menu__category {
+            h3 {
+                text-transform: uppercase;
+                font-weight: 400;
+                padding-top: $space;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    height: 0.25rem;
+                    width: 3rem;
+                    background-color: $color-tertiary;
+                    position: absolute;
+                    left: 0px;
+                    top: 2.3rem;
+
+                }
+            }
+
+            .menu-items {
+                display: flex;
+                background-color: $white;
+                border-radius: 15px;
+                overflow: hidden;
+                margin: $space 0 15px 0;
+                @include box-shadow;
+                width: 100%;
+
+                .menu-items__description {
+                    padding: 10px 0 10px 10px;
+                    display: flex;
+                    flex-direction: column;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    width: 80%;
+
+                    h4 {
+                        margin: 2px;
+                        font-size: 17px;
+                        @include longtexte;
+                    }
+
+                    p {
+                        margin: 2px;
+                        font-size: 15px;
+                        @include longtexte;
+                    }
+                }
+
+                .menu-items__prix {
+                    margin-left: auto;
+                    font-weight: bolder;
+                    align-self: flex-end;
+                    overflow: visible;
+                    padding: 0 15px 10px 20px;
+                }
+
+                .menu-items__valider {
+                    color: $white;
+                    background-color: $color-tertiary ;
+                    align-self: center;
+                    padding: 23px 20px 23px 20px;
+                    border-radius: 0 15px 15px 0;
+                    font-size: 10px;
+                    margin-right: -60px;
+                    transition: margin-right 0.5s;
+                    
+                    &:hover {
+                    .menu-items__prix {
+
+                        padding: 0 10px 10px 0;
+                        overflow: visible;
+
+                    }
+
+                    .menu-items__valider {
+                        margin-right: 0px;
+                    }
+
+                    i {
+                        animation: rotation 1s;
+                    }
+                }
+                }
+
+                
+            }
         }
     }
+}
 
+.menu__boutton {
+    display: flex;
+    justify-content: center;
+    padding: $bigspace;
+
+    button {
+        padding: 20px 60px 20px 60px;
+    }
 }
 
 .footerresto {
@@ -153,36 +157,16 @@ main {
     top: 270px;
 }
 
-@media screen and (min-width: 678px) {
-    .resto {
-        padding: 20px;
-        .resto__title {
-            h2 {
-                inline-size: 80%;
-            }
 
-        }
-    }
-}
 @media screen and (min-width: 992px) {
-    .resto {
-        padding: 20px;
-        .resto__title {
-            h2 {
-                width: 95%;
-            }
 
-        }
-        .menu__category__list{
-            display: flex;
-            justify-content: space-around;
+    .menu__category__list {
+        display: flex;
+        justify-content: space-around;
+        gap: 30px;
 
 
-            .menu-items{
-                width: 23%;
-                
-            }
-        }
 
     }
+
 }

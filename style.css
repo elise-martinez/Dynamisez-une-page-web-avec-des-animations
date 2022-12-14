@@ -1,3 +1,13 @@
+@charset "UTF-8";
+/**variables courantes pour les espacements**/
+/**variables des différents couleurs de fond**/
+/**couleurs primaire secondaire et tertiaire**/
+/**mixin pour les titres**/
+/**mixin centrage en flexbox**/
+/**mixin pour ombres**/
+/**mixin de grossisement**/
+/**mixin de grossisement**/
+/**Eléments basiques du code**/
 body {
   box-sizing: border-box;
   font-family: "Roboto";
@@ -26,6 +36,7 @@ header h1 {
   font-size: 30px;
 }
 
+/*Partie expolorez les restaurants*/
 .apropos {
   text-align: center;
   background-color: #f7f7f7;
@@ -39,16 +50,16 @@ header h1 {
   .renseignement {
     display: flex;
   }
-  .apropos {
+  .renseignement .apropos {
     width: 50%;
     padding-top: 90px;
     background-color: white;
   }
-  .fonctionnement {
+  .renseignement .fonctionnement {
     width: 50%;
     margin-right: 30px;
   }
-  .fonctionnement p {
+  .renseignement .fonctionnement p {
     font-size: 100px;
   }
 }
@@ -77,7 +88,7 @@ header h1 {
   flex-direction: column;
   padding: 20px;
 }
-.fonctionnement .propositions .propositions__etape {
+.fonctionnement .propositions__etape {
   display: flex;
   align-items: center;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
@@ -87,7 +98,7 @@ header h1 {
   margin: 10px 0 20px 0;
   padding: 6px;
 }
-.fonctionnement .propositions .propositions__etape .propositions__etape__numero {
+.fonctionnement .propositions__etape .propositions__etape__numero {
   position: absolute;
   left: -10px;
   padding-top: 2px;
@@ -99,23 +110,31 @@ header h1 {
   color: white;
   background-color: #9356dc;
 }
-.fonctionnement .propositions .propositions__etape i {
+.fonctionnement .propositions__etape i {
   font-size: 15px;
   font-weight: bold;
   margin: 0 35px 0 35px;
 }
-.fonctionnement .propositions .propositions__etape p {
+.fonctionnement .propositions__etape p {
   font-size: 15px;
   font-weight: bold;
 }
-.fonctionnement .propositions .propositions__etape:hover {
+.fonctionnement .propositions__etape:hover.propositions__etape {
   background-color: rgba(117, 86, 220, 0.1);
-  scale: 1.01;
 }
-.fonctionnement .propositions .propositions__etape:hover i {
+.fonctionnement .propositions__etape:hover.propositions__etape i {
   color: #9356dc;
 }
 
+@media screen and (min-width: 992px) {
+  .fonctionnement {
+    width: 50%;
+    margin-right: 30px;
+  }
+  .fonctionnement p {
+    font-size: 100px;
+  }
+}
 .menus {
   padding: 20px;
   background-color: #f7f7f7;
@@ -208,53 +227,55 @@ header {
   position: relative;
 }
 header i {
-  font-size: 20px;
   position: absolute;
+  font-size: 20px;
   top: 18px;
   left: 30px;
 }
 
 .img-entete {
+  position: absolute;
   height: 300px;
   width: 100%;
   object-fit: cover;
   display: block;
-  z-index: index 1;
-  position: absolute;
+  z-index: 1;
 }
 
 .resto {
+  position: relative;
   background-color: #f7f7f7;
   border-radius: 2rem 2rem 0 0;
-  position: relative;
   top: 270px;
   z-index: 10;
 }
 .resto .resto__title {
   font-family: "Shrikhand";
   font-size: 15px;
-  width: 100%;
   display: flex;
-  justify-content: space-around;
   align-items: baseline;
-  padding-top: 10px;
+  padding: 20px;
+}
+.resto .resto__title i {
+  position: absolute;
+  right: 30px;
+  top: 40px;
 }
 
 main {
   margin-top: -20px;
   z-index: 1;
 }
-
-.menu {
+main .menu {
   padding: 20px;
 }
-.menu .menu__category h3 {
+main .menu .menu__category h3 {
   text-transform: uppercase;
   font-weight: 400;
   padding-top: 10px;
   position: relative;
 }
-.menu .menu__category h3::after {
+main .menu .menu__category h3::after {
   content: "";
   height: 0.25rem;
   width: 3rem;
@@ -263,56 +284,69 @@ main {
   left: 0px;
   top: 2.3rem;
 }
-.menu .menu__category .menu-items {
+main .menu .menu__category .menu-items {
   display: flex;
-  align-items: flex-end;
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
   margin: 10px 0 15px 0;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  width: 100%;
 }
-.menu .menu__category .menu-items .menu-items__description {
+main .menu .menu__category .menu-items .menu-items__description {
   padding: 10px 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 80%;
+}
+main .menu .menu__category .menu-items .menu-items__description h4 {
+  margin: 2px;
+  font-size: 17px;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menu .menu__category .menu-items h4 {
-  margin: 2px;
-  font-size: 17px;
-}
-.menu .menu__category .menu-items p {
+main .menu .menu__category .menu-items .menu-items__description p {
   margin: 2px;
   font-size: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.menu .menu__category .menu-items .menu-items__prix {
+main .menu .menu__category .menu-items .menu-items__prix {
   margin-left: auto;
   font-weight: bolder;
   align-self: flex-end;
-  padding: 0 20px 10px 0;
+  overflow: visible;
+  padding: 0 15px 10px 20px;
 }
-.menu .menu__category .menu-items .menu-items__valider {
+main .menu .menu__category .menu-items .menu-items__valider {
   color: white;
   background-color: #99E2D0;
   align-self: center;
-  margin-right: -60px;
-  padding: 22px 20px 22px 20px;
+  padding: 23px 20px 23px 20px;
   border-radius: 0 15px 15px 0;
   font-size: 10px;
+  margin-right: -60px;
   transition: margin-right 0.5s;
 }
-.menu .menu__category .menu-items:hover .menu-items__valider {
+main .menu .menu__category .menu-items .menu-items__valider:hover .menu-items__prix {
+  padding: 0 10px 10px 0;
+  overflow: visible;
+}
+main .menu .menu__category .menu-items .menu-items__valider:hover .menu-items__valider {
   margin-right: 0px;
 }
-.menu .menu__category .menu-items:hover i {
+main .menu .menu__category .menu-items .menu-items__valider:hover i {
   animation: rotation 1s;
 }
-.menu .menu__boutton {
+
+.menu__boutton {
   display: flex;
   justify-content: center;
   padding: 20px;
 }
-.menu .menu__boutton button {
+.menu__boutton button {
   padding: 20px 60px 20px 60px;
 }
 
@@ -321,29 +355,14 @@ main {
   top: 270px;
 }
 
-@media screen and (min-width: 678px) {
-  .resto {
-    padding: 20px;
-  }
-  .resto .resto__title h2 {
-    inline-size: 80%;
-  }
-}
 @media screen and (min-width: 992px) {
-  .resto {
-    padding: 20px;
-  }
-  .resto .resto__title h2 {
-    width: 95%;
-  }
-  .resto .menu__category__list {
+  .menu__category__list {
     display: flex;
     justify-content: space-around;
-  }
-  .resto .menu__category__list .menu-items {
-    width: 23%;
+    gap: 30px;
   }
 }
+/**boutton "exploration du site et commande**/
 button {
   color: white;
   font-size: 1rem;
@@ -356,8 +375,22 @@ button {
 button:hover {
   background-image: linear-gradient(to top, rgba(169, 126, 214, 0.9), rgba(249, 163, 229, 0.9));
   box-shadow: 0.35rem 0.35rem 0.75rem rgba(0, 0, 0, 0.45);
+  transform: scale(1.05);
 }
 
+/**animation rotation en boucle pour le loader**/
+@keyframes tourne {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/**animation suppression pour le loader**/
+@keyframes disparait {
+  to {
+    transform: scale(0);
+  }
+}
+/**animation apparition pour les différentes cards**/
 @keyframes itemAppear {
   0% {
     transform: scale(0);
@@ -366,16 +399,7 @@ button:hover {
     transform: scale(1);
   }
 }
-@keyframes tourne {
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes disparait {
-  to {
-    transform: scale(0);
-  }
-}
+/**animation rotation avec arrêt pour les icones de validation**/
 @keyframes rotation {
   0% {
     transform: rotate(270deg);
@@ -384,14 +408,7 @@ button:hover {
     transform: rotate(0);
   }
 }
-.propositions__etape, .card {
-  animation-name: itemAppear;
-  animation-duration: 1000ms;
-  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  animation-fill-mode: both;
-  animation-delay: 3s;
-}
-
+/**parametrage d'animation du loader**/
 .loader {
   position: fixed;
   background-color: white;
@@ -409,10 +426,21 @@ button:hover {
   color: #9356dc;
 }
 
+/**parametrage d'animation d'apparition des cards fontionnement et menu de la page index**/
+.propositions__etape,
+.card {
+  animation-name: itemAppear;
+  animation-duration: 1000ms;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+  animation-delay: 3s;
+}
+
+/**parametrage d'animation du remplassage des coeurs**/
 .fas {
   color: transparent;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
-  background-clip: text;
+  background-clip: border-box;
   -webkit-background-clip: text;
   opacity: 0;
   transition: all 200ms ease-in-out;
@@ -421,6 +449,7 @@ button:hover {
   opacity: 1;
 }
 
+/**parametrage d'animation d'apparition des cards de plats des pages d'un menu de restaurant**/
 .menu-items {
   animation-name: itemAppear;
   animation-duration: 1000ms;
@@ -441,78 +470,6 @@ button:hover {
 }
 .menu-items:nth-child(5) {
   animation-delay: 500ms;
-}
-.menu-items:nth-child(6) {
-  animation-delay: 600ms;
-}
-.menu-items:nth-child(7) {
-  animation-delay: 700ms;
-}
-.menu-items:nth-child(8) {
-  animation-delay: 800ms;
-}
-.menu-items:nth-child(9) {
-  animation-delay: 900ms;
-}
-.menu-items:nth-child(10) {
-  animation-delay: 1000ms;
-}
-.menu-items:nth-child(11) {
-  animation-delay: 1100ms;
-}
-.menu-items:nth-child(12) {
-  animation-delay: 1200ms;
-}
-.menu-items:nth-child(13) {
-  animation-delay: 1300ms;
-}
-.menu-items:nth-child(14) {
-  animation-delay: 1400ms;
-}
-.menu-items:nth-child(15) {
-  animation-delay: 1500ms;
-}
-.menu-items:nth-child(16) {
-  animation-delay: 1600ms;
-}
-.menu-items:nth-child(17) {
-  animation-delay: 1700ms;
-}
-.menu-items:nth-child(18) {
-  animation-delay: 1800ms;
-}
-.menu-items:nth-child(19) {
-  animation-delay: 1900ms;
-}
-.menu-items:nth-child(20) {
-  animation-delay: 2000ms;
-}
-.menu-items:nth-child(21) {
-  animation-delay: 2100ms;
-}
-.menu-items:nth-child(22) {
-  animation-delay: 2200ms;
-}
-.menu-items:nth-child(23) {
-  animation-delay: 2300ms;
-}
-.menu-items:nth-child(24) {
-  animation-delay: 2400ms;
-}
-.menu-items:nth-child(25) {
-  animation-delay: 2500ms;
-}
-.menu-items:nth-child(26) {
-  animation-delay: 2600ms;
-}
-.menu-items:nth-child(27) {
-  animation-delay: 2700ms;
-}
-.menu-items:nth-child(28) {
-  animation-delay: 2800ms;
-}
-.menu-items:nth-child(29) {
-  animation-delay: 2900ms;
 }
 
 /*# sourceMappingURL=style.css.map */

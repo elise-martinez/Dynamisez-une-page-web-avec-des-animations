@@ -1,11 +1,16 @@
+        /**Eléments basiques du code**/
+
 body {
     box-sizing: border-box;
     font-family: "Roboto";
     margin: auto;
 }
+
 h2{
-@include titlerubrique;
+
+    @include titlerubrique;
 }
+
 a{
     text-decoration: none;
     color: black;

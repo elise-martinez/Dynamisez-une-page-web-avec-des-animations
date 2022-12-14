@@ -8,8 +8,7 @@
         background-color: $white;
         position: relative;
         @include box-shadow;
-
-
+  
         &__new {
             width: 80px;
             padding: 10px;
@@ -49,27 +48,30 @@
             position: absolute;
             top: 15px;
             right: 10%;
-
         }
 
     }
 
-    
+
 
 }
 
 @media screen and (min-width: 992px) {
-    .menus__list{
-        
-        .menus__list__haut{
-        display: flex;
-        gap: 30px ;}
-        .menus__list__bas{
+    .menus__list {
+
+        .menus__list__haut {
+            display: flex;
+            gap: 30px;
+        }
+
+        .menus__list__bas {
             display: flex;
             flex-direction: row;
             gap: 30px;
         }
-        a {width: 50%;
+
+        a {
+            width: 50%;
         }
     }
 }

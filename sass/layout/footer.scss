@@ -1,26 +1,32 @@
-
 footer {
     background-color: $fond-footer;
     font-size: 20px;
     padding: $bigspace;
-    & h3{
+
+    & h3 {
         color: $white;
         font-family: "Shrikhand";
     }
-    & a{    
+
+    & a {
         display: flex;
-        color: $white;  
+        color: $white;
         padding-top: $space;
     }
-    & i{
+
+    & i {
         padding-right: 10px;
     }
 }
+
 @media screen and (min-width: 992px) {
-    footer{
+    footer {
         padding: 20px 40px 40px 40px;
-        div {display: flex;
-        justify-content: space-between;}
-        
+
+        div {
+            display: flex;
+            justify-content: space-between;
+        }
+
     }
 }

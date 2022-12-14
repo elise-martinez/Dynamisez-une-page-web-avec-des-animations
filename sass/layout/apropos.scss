@@ -1,10 +1,11 @@
+/*Partie expolorez les restaurants*/
 
 .apropos {
     text-align: center;
-    background-color:$color-fond;
+    background-color: $color-fond;
     padding: $bigspace;
-    
-    
+
+
     & h1 {
         font-size: 25px;
 
@@ -14,20 +15,27 @@
 }
 
 @media screen and (min-width: 992px) {
-    .renseignement{
+    .renseignement {
         display: flex;
-    }.apropos {
 
-        width: 50%;
-        padding-top: 90px;
-        background-color: $white;
-    }
-    .fonctionnement {
-        width: 50%;
-        margin-right: 30px;
-        
-        p{
-            font-size: 100px;
+
+        .apropos {
+
+            width: 50%;
+            padding-top: 90px;
+            background-color: $white;
+        }
+
+        .fonctionnement {
+            width: 50%;
+            margin-right: 30px;
+
+            p {
+                font-size: 100px;
+            }
         }
     }
+
+
+
 }

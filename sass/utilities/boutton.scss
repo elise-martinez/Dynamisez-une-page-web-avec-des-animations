@@ -1,17 +1,17 @@
+/**boutton "exploration du site et commande**/
+
 button {
     color: white;
     font-size: 1rem;
     border: none;
     border-radius: 2rem;
-    background-image: linear-gradient(to top, rgba(150, 85, 220, 0.9 ),rgba(250, 120, 220, 0.9));
-    padding: 1rem 1rem; 
+    background-image: linear-gradient(to top, rgba(150, 85, 220, 0.9), rgba(250, 120, 220, 0.9));
+    padding: 1rem 1rem;
     @include box-shadow;
 
     &:hover {
-        background-image: linear-gradient(to top, rgba(169, 126, 214, 0.9),rgba(249, 163, 229, 0.9));
+        background-image: linear-gradient(to top, rgba(169, 126, 214, 0.9), rgba(249, 163, 229, 0.9));
         box-shadow: 0.35rem 0.35rem 0.75rem rgba(0, 0, 0, 0.45);
-        
-
+        @include grossissement;
     }
-
 }

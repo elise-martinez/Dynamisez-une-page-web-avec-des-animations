@@ -1,42 +1,48 @@
-@keyframes itemAppear {
-    0% {
-      transform: scale(0)
-    }
-    100% {
-      transform: scale(1);
-    }
-}
+
+/**animation rotation en boucle pour le loader**/
+
 @keyframes tourne {
     to {
-        transform : rotate(360deg)
+        transform: rotate(360deg)
     }
 }
+
+/**animation suppression pour le loader**/
+
 @keyframes disparait {
     to {
         transform: scale(0);
     }
 }
+
+/**animation apparition pour les différentes cards**/
+
+@keyframes itemAppear {
+    0% {
+        transform: scale(0)
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/**animation rotation avec arrêt pour les icones de validation**/
+
 @keyframes rotation {
     0% {
-      transform: rotate(270deg)
+        transform: rotate(270deg)
     }
+
     100% {
-      transform: rotate(0)
+        transform: rotate(0)
     }
-  }
-.propositions__etape,.card{
-
-
-    animation-name: itemAppear;
-    animation-duration: 1000ms;
-    animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
-    animation-fill-mode: both;
-    animation-delay: 3s;
-
-
-
 }
-.loader{
+
+
+
+/**parametrage d'animation du loader**/
+.loader {
     position: fixed;
     background-color: $white;
     display: grid;
@@ -52,37 +58,48 @@
     i {
         animation: tourne 3s linear;
         color: $primary-color;
-        
+
     }
 }
 
+/**parametrage d'animation d'apparition des cards fontionnement et menu de la page index**/
+.propositions__etape,
+.card {
 
+    animation-name: itemAppear;
+    animation-duration: 1000ms;
+    animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
+    animation-fill-mode: both;
+    animation-delay: 3s;
 
+}
+
+/**parametrage d'animation du remplassage des coeurs**/
 .fas {
     color: transparent;
-    background-image: linear-gradient(to top, $primary-color,$secondary-color);
-    background-clip: text;
-    -webkit-background-clip: text;
+    background-image: linear-gradient(to top, $primary-color, $secondary-color);
+    background-clip:border-box;
+    -webkit-background-clip:text;
     opacity: 0;
     transition: all 200ms ease-in-out;
+
     &:hover.fas {
         opacity: 1;
     }
 }
 
-.menu-items{
+/**parametrage d'animation d'apparition des cards de plats des pages d'un menu de restaurant**/
+.menu-items {
     animation-name: itemAppear;
     animation-duration: 1000ms;
-    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
     animation-fill-mode: both;
-    @for $i from 1 to 30 {
+
+    @for $i from 1 to 6 {
         &:nth-child(#{$i}) {
             animation-delay: 100ms * $i;
         }
 
-        
+
     }
 }
-
-
-

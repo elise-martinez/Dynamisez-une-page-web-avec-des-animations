@@ -1,13 +1,31 @@
-@mixin titlerubrique  {
-    font-size: 25px; 
-    margin-top: 15px;
+/**mixin pour les titres**/
 
+@mixin titlerubrique {
+    font-size: 25px;
+    margin-top: 15px;
 }
-@mixin flexcentre  {
+
+/**mixin centrage en flexbox**/
+
+@mixin flexcentre {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-@mixin box-shadow  {
+
+/**mixin pour ombres**/
+
+@mixin box-shadow {
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+}
+
+/**mixin de grossisement**/
+@mixin grossissement {
+    transform: scale(1.05)
+}
+
+/**mixin de grossisement**/
+@mixin longtexte {
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
