@@ -286,6 +286,7 @@ main .menu .menu__category h3::after {
 }
 main .menu .menu__category .menu-items {
   display: flex;
+  align-items: flex-end;
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
@@ -301,13 +302,13 @@ main .menu .menu__category .menu-items .menu-items__description {
   overflow: hidden;
   width: 80%;
 }
-main .menu .menu__category .menu-items .menu-items__description h4 {
+main .menu .menu__category .menu-items h4 {
   margin: 2px;
   font-size: 17px;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-main .menu .menu__category .menu-items .menu-items__description p {
+main .menu .menu__category .menu-items p {
   margin: 2px;
   font-size: 15px;
   text-overflow: ellipsis;
@@ -317,36 +318,31 @@ main .menu .menu__category .menu-items .menu-items__prix {
   margin-left: auto;
   font-weight: bolder;
   align-self: flex-end;
+  padding: 0 20px 10px 0;
   overflow: visible;
-  padding: 0 15px 10px 20px;
 }
 main .menu .menu__category .menu-items .menu-items__valider {
   color: white;
   background-color: #99E2D0;
   align-self: center;
+  margin-right: -60px;
   padding: 23px 20px 23px 20px;
   border-radius: 0 15px 15px 0;
   font-size: 10px;
-  margin-right: -60px;
   transition: margin-right 0.5s;
 }
-main .menu .menu__category .menu-items .menu-items__valider:hover .menu-items__prix {
-  padding: 0 10px 10px 0;
-  overflow: visible;
-}
-main .menu .menu__category .menu-items .menu-items__valider:hover .menu-items__valider {
+main .menu .menu__category .menu-items:hover .menu-items__valider {
   margin-right: 0px;
 }
-main .menu .menu__category .menu-items .menu-items__valider:hover i {
+main .menu .menu__category .menu-items:hover i {
   animation: rotation 1s;
 }
-
-.menu__boutton {
+main .menu .menu__boutton {
   display: flex;
   justify-content: center;
   padding: 20px;
 }
-.menu__boutton button {
+main .menu .menu__boutton button {
   padding: 20px 60px 20px 60px;
 }
 
