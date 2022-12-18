@@ -25,7 +25,7 @@
 }
 
 /**mixin de grossisement**/
-@mixin longtexte {
+@mixin textelong {
     text-overflow: ellipsis;
     overflow: hidden;
 }
